@@ -45,6 +45,21 @@ function generateImage() {
             console.error('Error fetching the image:', error);
         });
 }
+function downloadImage() {
+    const imageContainer = document.getElementById('imageContainer');
+    const img = imageContainer.querySelector('img');
+    
+    if (!img) {
+        alert('No image to download');
+        return;
+    }
+
+    const link = document.createElement('a');
+    link.href = img.src;
+    link.download = 'generated_image.png';
+    link.click();
+}
+
 window.onload = function () {
     generateImage()
 };
