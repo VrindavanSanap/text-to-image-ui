@@ -16,12 +16,13 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-    max-width: 600px;
+    max-width:1090px; 
     width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="text"] {
-    width: 90%;
+    width: 100%;
     padding: 12px;
     margin: 12px 0;
     background-color: #2e2e2e;
@@ -29,6 +30,7 @@ input[type="text"] {
     border: 1px solid #555;
     border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
@@ -50,9 +52,48 @@ button:hover {
 
 .image-container {
     margin-top: 30px;
+    /* padding-left: 100px; */
 }
 
 canvas {
     border: 1px solid #555;
     border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+       margin: 0px 5%; 
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+       margin: 0px 3%; 
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
 }
